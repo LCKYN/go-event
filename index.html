@@ -6,9 +6,12 @@
 
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/theme3.css" />
 
     <script src="./js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +39,7 @@
                         <div class="col-lg-6 mb-3">
                             <label for="Start">Start</label>
                             <div class="row">
-                                <div class="col-lg-7 mb-2" >
+                                <div class="col-lg-7 mb-2">
                                     <input type="date" class="form-control .form-date" id="Start-date" />
                                 </div>
                                 <div class="col-lg-5">
@@ -44,7 +47,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-lg-6 mb-3">
                             <label for="End">End</label>
                             <div class="row">
@@ -60,10 +62,43 @@
                 </div>
                 <div class="mb-1">
                     <hr class="mb-2">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Add Event</button>
-
+                    <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Add Event</button>
                 </div>
+                <div class="mb-3">
+                    <h5>List event</h5>
+                    <div class="row mb-2">
+                        
+                            <div class="col-lg-6 mb-3">
+                                <div class="date">
+                                    <span class="day">DD</span>
+                                    <span class="mon">MMM</span>
+                                </div>
+                                <div class="desc">
+                                    <p>
+                                        <strong class="hed">Temp Event</strong>
+                                        <span class="des">Location: Temp Location<br />When: Temp Duration</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div title="Add to Calendar" class="addeventatc btn-block block" data-styling="none">
+                                    Add to Calendar
+                                    <span class="addeventatc_icon"></span>
+                                    <span class="start">06/18/2015 09:00 AM</span>
+                                    <span class="end">06/18/2015 11:00 AM</span>
+                                    <span class="timezone">Europe/Paris</span>
+                                    <span class="title">Summary of the event</span>
+                                    <span class="description">Description of the event</span>
+                                    <span class="location">Location of the event</span>
+                                    <span class="organizer">Organizer</span>
+                                    <span class="organizer_email">Organizer e-mail</span>
+                                </div>
+                            </div>
 
+                            
+                        
+                    </div>
+                </div>
                 <div class="mb-1">
                     <hr class="mb-2">
                     <div class="row">
@@ -74,7 +109,6 @@
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Export</button>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
