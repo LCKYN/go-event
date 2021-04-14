@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    
+
     $('#btnClick').on('click', function () {
         if ($('#1').css('display') != 'none') {
             $('#2').html('Here is my dynamic content').show().siblings('div').hide();
@@ -7,6 +9,11 @@ $(document).ready(function () {
         }
     });
 });
+
+function getTimeZone() {
+    console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
+}
+
 
 async function paste() {
     const text = await navigator.clipboard.readText();
@@ -23,4 +30,5 @@ function myFunction() {
 
     /* Copy the text inside the text field */
     document.execCommand("copy");
+    
 }
