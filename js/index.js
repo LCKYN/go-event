@@ -41,9 +41,8 @@ $(document).ready(function () {
     });
 
     let regexDate = /(\d{4})-(\d{2})-(\d{2})/.exec(startDate);
-    let allday = (startTime)? startTime : "All-Day";
+    let allday = startTime ? startTime : "All-Day";
 
-    console.log(event);
     $("#listevent").append(`<div class="col-lg-6 mb-3">
                                 <div class="date">
                                     <span class="day">${regexDate[3]} / </span>
@@ -61,15 +60,19 @@ $(document).ready(function () {
                                 <div title="Add to Calendar" class="addeventatc btn-block block" data-styling="none">
                                     Add to Calendar
                                     <span class="addeventatc_icon"></span>
-                                    <span class="start">${startDate.replace("-", "/")} ${startTime}</span>
-                                    <span class="end">${endDate.replace("-", "/")} ${endTime}</span>
-                                    <span class="all_day_event">${Boolean(startTime)}</span>
-                                    <span class="${Intl.DateTimeFormat().resolvedOptions().timeZone}</span>
+                                    <span class="start">${startDate} ${startTime}</span>
+                                    <span class="end">${endDate} ${endTime}</span>
+                                    <span class="all_day_event">${!startTime}</span>
+                                    <span class="timezone">${
+                                      Intl.DateTimeFormat().resolvedOptions()
+                                        .timeZone
+                                    }</span>
                                     <span class="title">${title}</span>
                                     <span class="description">${description}</span>
                                     <span class="location">${location}</span>
                                 </div>
-                            </div>`);
+                            </div>
+                            <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js"></script>`);
 
     $("#Title").val("");
     $("#Location").val("");
@@ -85,4 +88,27 @@ $(document).ready(function () {
     //     $( "#Title" ).css("background-color","RED");
     // }
   });
+
+  $("#buttonExport").click(function () {
+    copyToClipboard(btoa(JSON.stringify(event)));
+  });
+
+  $("#buttonExport").click(function () {
+    let event = JSON.parse(atob(encoded))
+  });
+
+  
 });
+
+function copyToClipboard(text) {
+  var dummy = document.createElement("textarea");
+  // to avoid breaking orgain page when copying more words
+  // cant copy when adding below this code
+  // dummy.style.display = 'none'
+  document.body.appendChild(dummy);
+  //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+}
