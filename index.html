@@ -13,33 +13,52 @@
             <div class="col-md-2 order-md-1"></div>
             <div class="col-md-2 order-md-3"></div>
             <div class="col-md-8 order-md-2">
-                <label for="Title">Title</label>
-                <input type="text" class="form-control" id="Title" placeholder="Your Title" value="" required="" />
-
-                <label for="Location">Location</label>
-                <input type="text" class="form-control" id="Location" placeholder="Your location" value="" required="" />
-
-                <label for="Description">Description</label>
-                <input type="text" class="form-control" id="Description" placeholder="Your Description" value="" required="" />
-
-                <div class="row div4">
-                    <div class="col-md-6 mb-3 div8">
+                <div class="mb-3">
+                    <label for="Title">Title</label>
+                    <input type="text" class="form-control" id="Title" placeholder="Your Title" value="" required="" />
+                </div>
+                <div class="mb-3">
+                    <label for="Location">Location</label>
+                    <input type="text" class="form-control" id="Location" placeholder="Your location" value="" required="" />
+                </div>
+                <div class="mb-3">
+                    <label for="Description">Description</label>
+                    <input type="text" class="form-control" id="Description" placeholder="Your Description" value="" required="" />
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
                         <label for="Start">Start</label>
-                        <input type="text" class="form-control" id="Title" placeholder="Your Title" value="" required="" />
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input type="date" class="form-control .form-date" id="Start-date" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="time" class="form-control .form-date" id="Start-time" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 mb-3 div2">
-                        <label for="Title">Title</label>
-                        <input type="text" class="form-control" id="Title" placeholder="Your Title" value="" required="" />
+
+                    <div class="col-md-6">
+                        <label for="End">End</label>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input type="date" class="form-control .form-date" id="End-date" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="time" class="form-control .form-date" id="End-time" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="row div8">
+            </div>
+            <!-- <div class="row div8">
                     aaaa
                     <div class="col-md-2 mb-3 div4">aaa</div>
                     <div class="col-md-8 md-8 div8">bbb</div>
                     <div class="col-md-2 mb-3 div4">ccc</div>
                 </div> -->
-            </div>
         </div>
+    </div>
     </div>
 </body>
 

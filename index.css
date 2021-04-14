@@ -1,12 +1,12 @@
-.div2 {
+.div1 {
     background-color: rgb(125, 255, 125);
   }
 
-.div4 {
+.div2 {
   background-color: rgb(255, 255, 0);
 }
 
-.div8 {
+.div3 {
   background-color: rgb(255, 0, 0);
 }
 
@@ -23,4 +23,8 @@
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-date {
+    width: 50%;
 }
