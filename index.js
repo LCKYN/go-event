@@ -18,6 +18,7 @@ function getTimeZone() {
 async function paste() {
     const text = await navigator.clipboard.readText();
     document.getElementById("testsetst").value = text;
+    document.getElementById("hello").value = text;
 }
 
 function myFunction() {
