@@ -83,32 +83,34 @@ $(document).ready(function () {
 
     $("#End-date").val("");
     $("#End-time").val("");
-
-    // if(title.length == 0){
-    //     $( "#Title" ).css("background-color","RED");
-    // }
   });
 
   $("#buttonExport").click(function () {
     copyToClipboard(btoa(JSON.stringify(event)));
   });
 
-  $("#buttonExport").click(function () {
-    let event = JSON.parse(atob(encoded))
+  $("#buttonImport").click(function () {
+    paste();
   });
-
-  
 });
 
 function copyToClipboard(text) {
   var dummy = document.createElement("textarea");
-  // to avoid breaking orgain page when copying more words
-  // cant copy when adding below this code
-  // dummy.style.display = 'none'
   document.body.appendChild(dummy);
-  //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
   dummy.value = text;
   dummy.select();
   document.execCommand("copy");
   document.body.removeChild(dummy);
+}
+
+async function paste() {
+  const text = await navigator.clipboard.readText();
+  let eventList = {};
+  try {
+    eventList = JSON.parse(atob(text));
+  } catch (e) {
+      alert("please check your input");
+  }
+
+  console.log(eventList);
 }
