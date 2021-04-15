@@ -1,5 +1,6 @@
+var event = [];
+
 $(document).ready(function () {
-  var event = [];
   $("#buttonAdd").click(function () {
     let title = $("#Title").val();
     let location = $("#Location").val();
@@ -86,11 +87,11 @@ $(document).ready(function () {
   });
 
   $("#buttonExport").click(function () {
-    copyToClipboard(btoa(JSON.stringify(event)));
+    copyToClipboard((JSON.stringify(event)));
   });
 
   $("#buttonImport").click(function () {
-    paste();
+    paste($("#listevent"));
   });
 });
 
@@ -103,14 +104,51 @@ function copyToClipboard(text) {
   document.body.removeChild(dummy);
 }
 
-async function paste() {
+async function paste(listdiv) {
   const text = await navigator.clipboard.readText();
   let eventList = {};
   try {
-    eventList = JSON.parse(atob(text));
+    eventList = JSON.parse((text));
   } catch (e) {
       alert("please check your input");
   }
+  
+  
+  for (const i in eventList) {
+    event.push(eventList[i]);
+    let regexDate = /(\d{4})-(\d{2})-(\d{2})/.exec(eventList[i].startDate);
+    let allday = eventList[i].startTime ? eventList[i].startTime : "All-Day";
 
-  console.log(eventList);
+    listdiv.append(`<div class="col-lg-6 mb-3">
+                        <div class="date">
+                            <span class="day">${regexDate[3]} / </span>
+                            <span class="mon">${regexDate[2]} / </span>
+                            <span class="yea">${regexDate[1]}</span>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                <strong class="hed">${eventList[i].title}</strong>
+                                <span class="des">Location: ${eventList[i].location}<br />When: ${allday}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div title="Add to Calendar" class="addeventatc btn-block block" data-styling="none">
+                            Add to Calendar
+                            <span class="addeventatc_icon"></span>
+                            <span class="start">${eventList[i].startDate} ${eventList[i].startTime}</span>
+                            <span class="end">${eventList[i].endDate} ${eventList[i].endTime}</span>
+                            <span class="all_day_event">${!eventList[i].startTime}</span>
+                            <span class="timezone">${
+                            Intl.DateTimeFormat().resolvedOptions()
+                                .timeZone
+                            }</span>
+                            <span class="title">${eventList[i].title}</span>
+                            <span class="description">${eventList[i].description}</span>
+                            <span class="location">${eventList[i].location}</span>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js"></script>`);
+  }
+  
 }
