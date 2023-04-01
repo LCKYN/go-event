@@ -1,0 +1,15 @@
+:root {
+    --background_color: #22212C;
+    --darken_background_color: #17161e;
+    --line_color: #828282;
+}
+
+body{
+    font-family: "Edu NSW ACT Foundation", sans-serif;
+    font-size: 20px;
+    background-color: var(--background_color);
+}
+
+hr{
+    border-color: var(--line_color);
+}

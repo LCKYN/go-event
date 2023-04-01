@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./body.css">
+    <link rel="stylesheet" href="./setting_and_player_input.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Edu+NSW+ACT+Foundation">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="">Home</a>
+        <a href="#setting">Setting and players input</a>
+        <a href="#player_lists">Player lists</a>
+        <a href="#tournament">Tournament</a>
+        <a href="#summary">Summary</a>
+    </div>
+
+    <div class="main">
+        <h1 id="setting">Targrean Tournament</h1>
+
+        <h2>Setting and players input</h2>
+        <hr>
+        <p>Each player per line (made for 2, 4, 8, 16, 32, 64 players)</p>
+            <textarea id='line_counter' wrap='off' readonly>1.</textarea>
+            <textarea id='players_list' wrap='off'></textarea>
+        </p>
+        <div class="frame_summit_button" onclick="add_player()"><button>SUMMIT</button></div>
+
+
+        <div id="player_lists" class="spacer"></div>
+
+        <h2>Players lists</h2>
+        <hr>
+        <div class="center">
+            <div id="player_list_table" class="player-lists-grid-container">
+            </div>
+        </div>
+
+
+
+
+    <script src="./script.js" type="text/javascript"></script>
+</body>
