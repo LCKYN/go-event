@@ -19,14 +19,6 @@ players_list.addEventListener("keydown", (e) => {
     }
 });
 
-
-
-
-
-
-
-
-
 var lineCountCache = 0;
 function add_line_counter() {
     var lineCount = players_list.value.split("\n").length;
@@ -43,6 +35,30 @@ function add_line_counter() {
 players_list.addEventListener("input", () => {
     add_line_counter();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function get_player_name() {
     let all_player_name = document.getElementById("players_list").value;
