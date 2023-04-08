@@ -1,0 +1,22 @@
+
+.wrapper-player-grid-container{
+    display: grid;
+    grid-template-columns: 1480px ;
+    grid-gap: 10px;
+    padding: 10px;
+    color: var(--text_color);
+    justify-content: center;
+
+}
+
+.player-grid-container{
+    display: grid;
+    grid-template-columns: 40px 600px 40px 40px 40px 600px ;
+    grid-gap: 10px;
+    padding: 10px;
+    color: var(--text_color);
+    background-color: var(--darker);
+}
+
+.player-grid-item{
+}

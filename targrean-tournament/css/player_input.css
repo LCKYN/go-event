@@ -1,10 +1,3 @@
-:root {
-    --main_color: #a972fd;
-    --background_color: #22212C;
-    --background_color_inner: #383648;
-    --menu_background_color_color: #333;
-    --font_color: #f2f2f2;
-}
 
 #players_list, #line_counter {
     font-family: lucida console, courier new, courier, monospace;
@@ -40,7 +33,7 @@
     border-style: hidden;
     border-right-style: solid;
     border-right-color: var(--background_color);
-    color: var(--font_color);
+    color: var(--text_color);
 }
 
 #players_list {
@@ -49,5 +42,5 @@
     /* Determine appearance of code editor */
     background-color: var(--background_color_inner);
     border-style: hidden;
-    color: var(--font_color);
+    color: var(--text_color);
 }

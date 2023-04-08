@@ -1,0 +1,15 @@
+:root{
+    --main_color: #a972fd;
+    --background_color: #22212C;
+    --background_color_inner: #383648;
+    --menu_background_color_color: #333;
+    --text_color: #f2f2f2;
+    --line_color: #828282;
+    --darker: #00000030;
+    --lighter: #ffffff30;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}

@@ -62,6 +62,9 @@ button:hover{
     border-color: var(--darken_background_color);
 }
 
+.darker{
+    background-color: var(--darker);
+}
 
 .no_border{
     border: none;
