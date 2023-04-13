@@ -164,7 +164,7 @@ var data = [
     {
         "name": "neNutni",
         "time": new Date("04/07/2023 9:12 PM"),
-        "tactic": "4-4-2",
+        "tactic": "4-1-3-2",
         "backfield": 4,
         "midfield": 4,
         "forward": 2,
@@ -278,7 +278,7 @@ function show_data(name, backfield, midfield, forward) {
 
         count += 1;
 
-        if (count > 20)
+        if (count >= 20)
             break;
     }
 }
