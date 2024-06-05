@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #282828;
+    color: #fff;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1 {
+    background-image: url('images/section1-bg.jpg');
+}
+
+#section2 {
+    background-image: url('images/section2-bg.jpg');
+}
+
+#section3 {
+    background-image: url('images/section3-bg.jpg');
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #282828;
+    color: #fff;
+}
