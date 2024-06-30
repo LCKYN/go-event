@@ -1,0 +1,75 @@
+/* styles/themes.css */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #000000;
+    --box-background-color: #ffffff;
+    --box-text-color: #000000;
+    --nav-background-color: #333333;
+    --nav-text-color: #ffffff;
+}
+
+body[data-theme="dark"] {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --box-background-color: #444444;
+    --box-text-color: #ffffff;
+    --nav-background-color: #222222;
+    --nav-text-color: #ffffff;
+}
+
+body[data-theme="blue"] {
+    --background-color: #e6f3ff;
+    --text-color: #00366d;
+    --box-background-color: #ffffff;
+    --box-text-color: #00366d;
+    --nav-background-color: #00366d;
+    --nav-text-color: #e6f3ff;
+}
+
+body[data-theme="green"] {
+    --background-color: #e6fff0;
+    --text-color: #005c29;
+    --box-background-color: #ffffff;
+    --box-text-color: #005c29;
+    --nav-background-color: #005c29;
+    --nav-text-color: #e6fff0;
+}
+
+body[data-theme="sky-blue"] {
+    --background-color: #8AAAE5;
+    --text-color: #FFFFFF;
+    --box-background-color: #FFFFFF;
+    --box-text-color: #8AAAE5;
+    --nav-background-color: #FFFFFF;
+    --nav-text-color: #8AAAE5;
+}
+
+.theme-option[data-theme="light"] .text-color { background-color: #000000; }
+.theme-option[data-theme="light"] .bg-color { background-color: #f0f0f0; }
+
+.theme-option[data-theme="dark"] .text-color { background-color: #ffffff; }
+.theme-option[data-theme="dark"] .bg-color { background-color: #333333; }
+
+.theme-option[data-theme="blue"] .text-color { background-color: #00366d; }
+.theme-option[data-theme="blue"] .bg-color { background-color: #e6f3ff; }
+
+.theme-option[data-theme="green"] .text-color { background-color: #005c29; }
+.theme-option[data-theme="green"] .bg-color { background-color: #e6fff0; }
+
+.theme-option[data-theme="sky-blue"] .text-color { background-color: #FFFFFF; }
+.theme-option[data-theme="sky-blue"] .bg-color { background-color: #8AAAE5; }
+
+body.swapped-theme {
+    --swapped-background-color: var(--text-color);
+    --swapped-text-color: var(--background-color);
+}
+
+body.swapped-theme {
+    background-color: var(--swapped-background-color);
+    color: var(--swapped-text-color);
+}
+
+body.swapped-theme .additional-box {
+    background-color: var(--swapped-text-color);
+    color: var(--swapped-background-color);
+}

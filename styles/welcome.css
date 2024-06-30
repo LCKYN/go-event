@@ -1,0 +1,45 @@
+/* styles/welcome.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.big-text {
+    font-size: 2em;
+}
+
+.big-text .regular-text {
+    font-weight: normal;
+}
+
+.big-text .bold-text {
+    font-weight: bold;
+}
+
+.welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.welcome-quote {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 20%;
+}
+
+.additional-box {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--box-background-color);
+    color: var(--box-text-color);
+    text-align: center;
+}

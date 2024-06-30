@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <style>
-        .big-text {
-            font-size: 2em;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/welcome.css">
+    <script src="scripts/themechanger.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <p class="big-text">It's me, LCKYN,</p>
-    <p>the man who lives for data,<br>
-        unlocking tomorrow's potential.</p>
+    <nav id="navbar">
+        <a href="#welcome">
+            Not implemented yet
+        </a>
+        <a href="#additional">
+            Not implemented yet
+        </a>
+        <div class="theme-picker">
+            <button id="theme-toggle" aria-label="Toggle theme">A</button>
+            <div class="theme-options">
+                <button class="theme-option" data-theme="dark">
+                    <span class="color-box"><span class="text-color"></span><span class="bg-color"></span></span>
+                </button>
+                <button class="theme-option" data-theme="blue">
+                    <span class="color-box"><span class="text-color"></span><span class="bg-color"></span></span>
+                </button>
+                <button class="theme-option" data-theme="green">
+                    <span class="color-box"><span class="text-color"></span><span class="bg-color"></span></span>
+                </button>
+                <button class="theme-option" data-theme="sky-blue">
+                    <span class="color-box"><span class="text-color"></span><span class="bg-color"></span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="welcome-page" id="welcome">
+        <div class="welcome-quote">
+            <p class="big-text">
+                <span class="regular-text">
+                    It's me,
+                </span>
+                <span class="bold-text">
+                    LCKYN
+                </span>
+            </p>
+            <p>the man who lives for data,<br>
+                unlocking tomorrow's potential.</p>
+        </div>
+    </div>
+
+    <div class="additional-box" id="additional">
+        <p>Not implemented yet</p>
+    </div>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
